@@ -1,3 +1,7 @@
+# React-Redux Google Keep
+
+This project was created for the class of web technologies using react and redux
+--
 # Redux Todos with Undo Example
 
 This project template was built with [Create React App](https://github.com/facebookincubator/create-react-app).
