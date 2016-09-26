@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
 let AddTodo = ({ dispatch }) => {
-  let input
+  let input;
+  let todo_title;
 
   return (
     <div>
@@ -15,9 +16,22 @@ let AddTodo = ({ dispatch }) => {
         dispatch(addTodo(input.value))
         input.value = ''
       }}>
-        <input ref={node => {
-          input = node
-        }} />
+				<div>
+					<div>
+						<span>Titulo: </span>
+						<input ref={node => {
+							todo_title = node
+						}} />
+					</div>
+					<div>
+						<span>Todo:</span>
+						<input ref={node => {
+							input = node
+						}} />
+					</div>
+				</div>
+
+
         <button type="submit">
           Add Todo
         </button>
