@@ -8,11 +8,13 @@ import UndoRedo from '../containers/UndoRedo'
 
 const App = () => (
   <div>
-    <AddTodo />
-    <AddNote />
+		<AddNote />
 		<VisibleNoteList/>
+
+		<AddTodo />
     <VisibleTodoList />
-    <Footer />
+
+		<Footer />
     <UndoRedo />
   </div>
 );

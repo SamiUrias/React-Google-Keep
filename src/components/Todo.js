@@ -1,5 +1,14 @@
 import React, { PropTypes } from 'react'
 
+//Debug inline style
+const dev_style_remove_todo_1 = {
+  display: 'inline-block',
+  paddingRight: '20px'
+};
+const dev_style_remove_todo = {
+  display: 'inline-block'
+};
+
 const Todo = ({ onClick, completed, text }) => (
   <li
     onClick={onClick}
@@ -7,7 +16,10 @@ const Todo = ({ onClick, completed, text }) => (
       textDecoration: completed ? 'line-through' : 'none'
     }}
   >
-    {text}
+    <div>
+      <div style={dev_style_remove_todo_1}>{text}</div>
+      <div style={dev_style_remove_todo}><a href="">x</a></div>
+    </div>
   </li>
 )
 

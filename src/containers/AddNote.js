@@ -7,6 +7,7 @@ import { addNote } from '../actions'
 
 let AddNote = ({ dispatch }) => {
 	let input;
+	let note_title;
 
 	return (
 		<div>
@@ -15,12 +16,19 @@ let AddNote = ({ dispatch }) => {
 				if (!input.value.trim()) {
 					return
 				}
-				dispatch(addNote(input.value));
+				dispatch(addNote(note_title.value, input.value));
 				input.value = ''
+				note_title.value = ''
 			}}>
 				<input ref={node => {
-					input = node //Change for text
+					note_title = node;
 				}} />
+
+
+				<input ref={node => {
+					input = node;
+				}} />
+
 				<button type="submit">
 					Add Note
 				</button>

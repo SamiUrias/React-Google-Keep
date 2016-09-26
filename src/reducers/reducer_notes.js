@@ -8,6 +8,7 @@ const note = (state, action) => {
         case 'ADD_NOTE':
             return ({
                 id: action.id,
+                title: action.title,
                 text: action.text,
             });
         default:

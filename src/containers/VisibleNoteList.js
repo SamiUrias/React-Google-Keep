@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
 import NoteList from '../components/NoteList'
 
-const getVisibleTodos = (notes, filter) => {
+const getVisibleNotes = (notes, filter) => {
 	switch (filter) {
 		case 'SHOW_ALL':
 			return notes
@@ -19,7 +19,7 @@ const getVisibleTodos = (notes, filter) => {
 }
 
 const mapStateToProps = (state) => ({
-	notes: getVisibleTodos(state.notes.present, state.visibilityFilter)
+	notes: getVisibleNotes(state.notes.present, state.visibilityFilter)
 });
 
 // const mapDispatchToProps = ({
